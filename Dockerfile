@@ -6,7 +6,6 @@ FROM alpine
 
  RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone && apk update && apk add apache2 php
  RUN rm -rf /var/www/html/index.html
- RUN chown -R node /app/node_modules
  COPY src/index.php /var/www/html
 
  EXPOSE 80
