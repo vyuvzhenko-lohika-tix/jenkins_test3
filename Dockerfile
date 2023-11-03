@@ -8,6 +8,6 @@ FROM alpine
 
  COPY src/index.php /var/www/html
 
- EXPOSE 8088
+ EXPOSE 80
 
  CMD ["httpd", "-D", "FOREGROUND"]
